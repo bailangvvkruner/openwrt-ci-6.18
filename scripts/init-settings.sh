@@ -8,6 +8,7 @@ uci set luci.apply.holdoff='1'
 
 uci commit luci
 
+sed -i "s|:/bin/ash$|:$(which bash 2>/dev/null||command -v bash 2>/dev/null)|" /etc/passwd 2>/dev/null
 # Disable IPV6 ula prefix
 # sed -i 's/^[^#].*option ula/#&/' /etc/config/network
 
