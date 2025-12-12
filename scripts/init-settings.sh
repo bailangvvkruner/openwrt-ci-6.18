@@ -2,6 +2,10 @@
 
 # Set default theme to luci-theme-argon
 uci set luci.main.mediaurlbase='/luci-static/argon'
+
+# 设置全局倒计时为1s
+uci set luci.apply.holdoff='1'
+
 uci commit luci
 
 # Disable IPV6 ula prefix
